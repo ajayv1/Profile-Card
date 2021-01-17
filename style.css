@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+html {
+  font-size: 18px;
+}
+
+html, body {
+  margin: 0;
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  min-width: 100vw;
+  height: 100%;
+  background: #19a2ae;
+  font-family: 'Kumbh Sans';
+  overflow: hidden;
+}
+
+img {
+  border-radius: 50%;
+  border: 3px solid white;
+}
+
+.card-component {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+  margin: auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: hidden;
+  position: relative;
+  font-family: 'Kumbh Sans', sans-serif;
+}
+
+.card-component:before, .card-component:after {
+  position: absolute;
+  content: "";
+  width: 100vw;
+  height: 100vh;
+  background-size: auto;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.card-component:before {
+  top: 0;
+  left: 0;
+  background: url("/images/bg-pattern-top.svg") no-repeat bottom right;
+}
+
+.card-component:after {
+  top: 100%;
+  left: 100%;
+  background: url("/images/bg-pattern-bottom.svg") no-repeat top left;
+}
+
+.attribution {
+  margin-top: 50px;
+  font-size: 10px;
+}
+
+.card-container {
+  width: 300px;
+  text-align: center;
+  background-color: white;
+  border-radius: 12px;
+  -webkit-box-shadow: 5px 5px 10px rgba(150, 150, 150, 0.4);
+          box-shadow: 5px 5px 10px rgba(150, 150, 150, 0.4);
+}
+
+.card-container__header {
+  background-image: url(/images/bg-pattern-card.svg);
+  height: 120px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.card-container__image {
+  margin-top: -60px;
+}
+
+.card-container__name {
+  font-weight: 400;
+  color: #2d3248;
+}
+
+.card-container__name p:nth-child(1) {
+  font-weight: 700;
+  color: #000000;
+}
+
+.card-container__year {
+  font-weight: 400;
+  color: #6a6f81;
+}
+
+.card-container__city {
+  font-weight: 400;
+  font-size: 14px;
+  margin-top: 15px;
+  color: #969696;
+}
+
+.card-container__footer {
+  margin-top: 20px;
+  padding: 18px;
+  border-top: 1px solid #969696;
+}
+
+.card-container__footer > .box {
+  width: 33%;
+}
+
+.card-container__footer > .box p:nth-child(1) {
+  font-weight: 700;
+  color: #2d3248;
+}
+
+.card-container__footer > .box p:nth-child(2) {
+  font-weight: 400;
+  font-size: 11px;
+  color: #969696;
+  margin-top: 10px;
+  letter-spacing: 1.5px;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,148 @@
+// Layout
+$mobile: 375px;
+$desktop: 1440px;
+
+// Colors
+$darkcyan: hsl(185, 75%, 39%);
+$darkblue:  hsl(229, 23%, 23%);
+$darkgrayishblue: hsl(227, 10%, 46%);
+$darkgray: hsl(0, 0%, 59%);
+
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+html {
+  font-size: 18px;
+}
+
+html, body {
+  margin: 0;
+}
+
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  min-width: 100vw;
+  height: 100%;
+  background: hsl(185, 75%, 39%);
+  font-family: 'Kumbh Sans';
+  overflow: hidden;
+}
+
+img {
+  border-radius: 50%;
+  border: 3px solid white;
+}
+
+.card-component {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: auto;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+  font-family: 'Kumbh Sans', sans-serif;
+
+  &:before,
+  &:after {
+    position: absolute;
+    content: "";
+    width: 100vw;
+    height: 100vh;
+    background-size: auto;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+  }
+
+  &:before {
+    top: 0;
+    left: 0;
+    background: url("/images/bg-pattern-top.svg") no-repeat bottom right;
+  }
+
+  &:after {
+    top: 100%;
+    left: 100%;
+    background: url("/images/bg-pattern-bottom.svg") no-repeat top left;
+  }
+}
+
+.attribution {
+  margin-top: 50px;
+  font-size: 10px;
+}
+
+.card-container {
+  width: 300px;
+  text-align: center;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 5px 5px 10px rgba($darkgray, 0.4);
+
+  &__header {
+    background-image: url(/images/bg-pattern-card.svg);
+    height: 120px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  &__image {
+    margin-top: -60px;
+  }
+
+  &__name {
+    font-weight: 400;
+    color: $darkblue;
+    & p:nth-child(1) {
+      font-weight: 700;
+      color: #000000;
+    }
+  }
+
+  &__year {
+    font-weight: 400;
+    color: $darkgrayishblue;
+  }
+
+  &__city {
+    font-weight: 400;
+    font-size: 14px;
+    margin-top: 15px;
+    color: $darkgray;
+  }
+
+  &__footer {
+    margin-top: 20px;
+    padding: 18px;
+    border-top: 1px solid hsl(0, 0%, 59%);
+    & > .box {
+      width: 33%;
+      & p:nth-child(1) {
+        font-weight: 700;
+        color: $darkblue;
+      }
+      & p:nth-child(2) {
+        font-weight: 400;
+        font-size: 11px;
+        color: $darkgray;
+        margin-top: 10px;
+        letter-spacing: 1.5px;
+      }
+    }
+  }
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
